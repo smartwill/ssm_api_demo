@@ -1,34 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--XML对应实体类，pojo-->
+<!--定义命名空间为IMapper-->
 <mapper namespace="com.puzzle.api.mapper.IGameClueMapper">
-
+    <!--XML定义返回数据类型为pojo类-->
     <resultMap id="GameClue" type="com.puzzle.api.entity.po.GameClue">
         <result column="id" jdbcType="INTEGER" property="id"/>
         <result column="clue_key" jdbcType="INTEGER" property="clueKey"/>
-
         <result column="title" jdbcType="VARCHAR" property="title"/>
         <result column="tips" jdbcType="VARCHAR" property="tips"/>
         <result column="tips_logo" jdbcType="VARCHAR" property="tipsLogo"/>
         <result column="photo" jdbcType="VARCHAR" property="photo"/>
         <result column="local" jdbcType="VARCHAR" property="local"/>
         <result column="qrcode" jdbcType="VARCHAR" property="qrcode"/>
-
         <result column="status" jdbcType="INTEGER" property="status"/>
         <result column="c_time" jdbcType="INTEGER" property="cTime"/>
         <result column="u_time" jdbcType="INTEGER" property="uTime"/>
         <result column="del" jdbcType="INTEGER" property="del"/>
-
-
     </resultMap>
-
-
 
     <select id="getClueInfo" resultType="GameClue">
         select `id`,`clue_key`,`title`,`tips`,`tips_logo`,`photo`,`qrcode` from murloc_game_clue where id=#{id} limit 1
     </select>
-    
-
-
 
 </mapper>
