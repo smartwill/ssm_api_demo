@@ -226,4 +226,4 @@ public class ApiApplication {
 
 GitHub地址: [https://github.com/smartwill/ssm_api_demo](https://github.com/smartwill/ssm_api_demo)
 或 git clone https://github.com/smartwill/ssm_api_demo.git
-database/game_clue.sql 导入数据库，数据库名称：murloc_puzzle
+database/game_clue.sql 导入数据库
